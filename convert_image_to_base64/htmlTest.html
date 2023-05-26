@@ -1,0 +1,32 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>通过filereader接口读取文件</title>
+  <script type="text/javascript">
+    function getBase64Image(img) {
+        var canvas = document.createElement("canvas");
+        canvas.width = img.width;
+        canvas.height = img.height;
+        var ctx = canvas.getContext("2d");
+        ctx.drawImage(img, 0, 0, img.width, img.height);
+        var dataURL = canvas.toDataURL("image/png");
+        return dataURL
+        // return dataURL.replace("data:image/png;base64,", "");
+    }
+
+    function main() {
+        var img = document.createElement('img');
+        img.src = 'https://tse3-mm.cn.bing.net/th/id/OIP-C.Blag-F1I9HmWBEf6jGLw5gHaFF?w=243&h=180&c=7&r=0&o=5&dpr=1.88&pid=1.7';  //此处自己替换本地图片的地址
+        img.crossOrigin= 'anonymous'
+        img.onload =function() {
+          debugger
+            var data = getBase64Image(img);
+            var img1 = document.createElement('img');
+            img1.src = data;
+            document.body.appendChild(img1);
+            console.log(data);
+        }
+    }
+    main()
+</script>
+</head>

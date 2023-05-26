@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+        <meta name="viewport" id="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta name="format-detection" content="telephone=no"/>
+        <title>GreatBoy</title>
+        <style>
+            /*-----css Reset end-----*/
+            body,h1,h2,h3,h4,h5,h6,p,ul,ol,form{
+                margin:0;
+                padding:0px;
+            }
+            body{
+                font-size: 14px;
+            }
+            .nav img{
+                width: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="nav"><img src="http://p1.jmstatic.com/banner/75/mobile_app/24326_0.jpg"/></div>
+        <!-- <div id="container">
+            <div id="user">用户信息<span id="userinfo"></span></div>
+        </div> -->
+        <table style = 'margin: 0 auto;'>
+            <tr>
+                <td>用户信息</td>
+            </tr>
+        </table>
+        <script type="text/javascript">
+                (function(win) {
+                    var doc = win.document,
+                        html = doc.documentElement,
+                        scale = 16,
+                        resizeEvent = 'orientationchange' in window ? 'orientationchange' : 'resize';
+                    function calculate(){
+                        windowWidth = html && html.clientWidth || win.innerWidth;
+                        windowHeight = html && html.clientHeight || win.innerHeight;
+                        deviceAgent = navigator.userAgent.toLowerCase();
+                        scale = parseFloat(windowWidth / 3.2);
+                        // 修复微信2.3系统bug
+                        if (deviceAgent.match(/android\s*2.3/) && deviceAgent.match(/micromessenger/)) {
+                            scale = 16;
+                        }
+                        if( scale > 150 ){
+                            scale = 150;
+                        }
+                        html.style.fontSize = scale + 'px';
+                    }
+                    html.style.opacity = 0;   // 未渲染出来先把页面隐藏 
+                    win.addEventListener(resizeEvent, function() {
+                        calculate();
+                    }, false);
+                    doc.addEventListener('DOMContentLoaded', function() {
+                        calculate();
+                        body = doc.body;
+                        body.style.width = '3.2rem';
+                        body.style.fontSize = '0.13rem';
+                        body.style.margin = '0px auto';
+                        html.style.opacity = 1;
+                    }, false);
+                })(window);
+        </script>
+    </body>
+</html>

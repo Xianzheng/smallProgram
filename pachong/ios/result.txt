@@ -1,0 +1,3 @@
+RTÉPlayer12+:Data Used to Track You:Usage Data|;Data Linked to You:User Content|;Data Not Linked to You:Identifiers|Usage Data|Diagnostics|;
+:
+JustEat-FoodDelivery17+:Data Used to Track You:Purchases|Financial Info|Location|Search History|Identifiers|Usage Data|Other Data|;Data Linked to You:Purchases|Financial Info|Location|Contact Info|User Content|Search History|Identifiers|Usage Data|Diagnostics|Other Data|;Data Not Linked to You:Diagnostics|;

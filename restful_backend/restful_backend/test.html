@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        
+         const options = {
+            method: "GET",
+            
+        };
+
+        fetch("http://localhost:8000/", options)
+            .then((response) => response.json())
+            .then((response) => {
+            console.log(response);
+            });
+        /*
+        fetch('http://localhost:8000')
+        .then(function(data) {
+            //text()获取到json格式
+            // return data.text()
+            //json()将获取到的json格式转化为对象格式
+            return data.json()
+        })
+        .then(function(res) {
+            console.log(res);
+        })
+        */
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>
